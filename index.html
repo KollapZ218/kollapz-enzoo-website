@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#05040d">
+<meta name="description" content="KOLLAPZ × ENZOO – Gaming, gute Vibes und eine Community.">
+<title>KOLLAPZ × ENZOO | Community</title>
+<style>
+:root{--bg:#05040d;--panel:rgba(12,10,28,.78);--white:#f7f4ff;--muted:#b6b1d0;--purple:#bd39ff;--blue:#23caff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.scene{position:fixed;inset:0;z-index:-3;overflow:hidden;background:radial-gradient(ellipse at 18% 25%,#32105c 0,transparent 38%),radial-gradient(ellipse at 82% 38%,#052c58 0,transparent 40%),#05040d}
+.scene:before,.scene:after{content:"";position:absolute;width:70vw;height:70vw;border-radius:50%;filter:blur(75px);opacity:.28;animation:drift 17s ease-in-out infinite alternate}
+.scene:before{background:radial-gradient(circle,#a900ff 0,transparent 62%);left:-20vw;top:-22vw}
+.scene:after{background:radial-gradient(circle,#007bff 0,transparent 62%);right:-20vw;bottom:-35vw;animation-delay:-8s}
+.gridbg{position:absolute;inset:0;background-image:linear-gradient(#6b43ff13 1px,transparent 1px),linear-gradient(90deg,#6b43ff13 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 90%);transform:perspective(700px) rotateX(58deg) scale(1.7);transform-origin:bottom;opacity:.5}
+.streak{position:absolute;width:150vw;height:2px;left:-20vw;top:36%;background:linear-gradient(90deg,transparent,#bb38ff,white,#22caff,transparent);filter:blur(2px);opacity:.7;transform:rotate(-13deg);animation:beam 8s ease-in-out infinite}
+.streak.two{top:70%;opacity:.35;animation-delay:-4s;transform:rotate(8deg)}
+.wrap{width:min(1160px,calc(100% - 38px));margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid #ffffff12}
+.brand{font-weight:950;letter-spacing:.13em;color:#fff;text-shadow:0 0 18px #a63cff;font-size:1.02rem}
+nav{display:flex;gap:23px;color:#d5d0e7;font-size:.9rem}nav a:hover{color:#fff;text-shadow:0 0 12px var(--blue)}
+.online{color:#73ffc5;font-size:.85rem;white-space:nowrap}.online:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#32ffab;box-shadow:0 0 12px #32ffab;margin-right:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:999px;border:1px solid #a64cff9c;background:#ffffff08;font-weight:750;transition:.25s;box-shadow:inset 0 0 18px #a43bff0a}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 24px #9f39ff70}.primary{background:linear-gradient(100deg,#9b21ff,#5a38ff 60%,#126eea);border-color:#d9a2ff;box-shadow:0 0 28px #8c29ff65}
+.hero{min-height:590px;display:grid;place-items:center;text-align:center;position:relative;padding:80px 0 90px}
+.orb{position:absolute;width:min(500px,80vw);aspect-ratio:1;border-radius:50%;border:1px solid #3bc9ff7a;box-shadow:0 0 50px #782aff30,inset 0 0 65px #2f5dff20;animation:orbit 24s linear infinite;z-index:-1}
+.orb:before,.orb:after{content:"";position:absolute;inset:8%;border-radius:50%;border:1px dashed #c044ff70;transform:rotateX(68deg) rotateZ(25deg)}
+.orb:after{inset:18%;border-color:#21caff80;transform:rotateY(65deg) rotateZ(-20deg)}
+.eyebrow{font-size:.76rem;letter-spacing:.35em;text-transform:uppercase;color:#e0a5ff}
+h1{font-size:clamp(2.8rem,8.5vw,7rem);line-height:.95;letter-spacing:-.06em;margin:24px 0;background:linear-gradient(100deg,#fff 8%,#cb68ff 45%,#37d8ff 82%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 45px #7e2bff28}
+.tagline{font-size:.74rem;letter-spacing:.36em;color:#c5bee1;text-transform:uppercase}.intro{max-width:720px;margin:24px auto 0;color:#ded9f0;line-height:1.8}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:30px}
+section{padding:48px 0 55px}.section-label{color:#df69ff;letter-spacing:.3em;font-weight:800;font-size:.78rem}
+h2{font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.045em;margin:12px 0 18px}.gradient{background:linear-gradient(90deg,#d66cff,#49dfff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.visual{min-height:300px;border-radius:25px;border:1px solid #8f45ff55;background:radial-gradient(ellipse at 50% 55%,#3b1d8d 0,transparent 48%),linear-gradient(135deg,#0d0820,#050914);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 15px 70px #4b18a51c}
+.visual:before{content:"";position:absolute;width:340px;height:340px;border:1px solid #ac4dff99;border-radius:50%;box-shadow:0 0 45px #7f31ff44,inset 0 0 45px #7f31ff30;animation:orbit 25s linear infinite}
+.visual:after{content:"";position:absolute;width:430px;height:100px;border:2px solid #24caffaa;border-radius:50%;transform:rotate(-28deg);box-shadow:0 0 28px #24caff44}
+.monogram{font-size:clamp(4rem,8vw,7rem);font-weight:1000;letter-spacing:-.12em;background:linear-gradient(135deg,#f3d4ff,#a338ff 48%,#2bdfff);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 45px #a52bff40;z-index:1}
+.about-copy p{color:var(--muted);line-height:1.8}.values{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;color:#e8e0ff;font-size:.88rem}.values span{border:1px solid #ffffff18;background:#ffffff06;border-radius:999px;padding:9px 12px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:24px}.card{border:1px solid #8448ed35;border-radius:20px;padding:23px;background:linear-gradient(145deg,#131027d9,#070711e8);backdrop-filter:blur(10px);transition:.25s}.card:hover{transform:translateY(-5px);border-color:#36cfff9c;box-shadow:0 12px 38px #711fff20}.icon{font-size:1.8rem;color:#cf61ff;text-shadow:0 0 15px #a735ff;margin-bottom:14px}.card h3{font-size:1rem;margin:0 0 10px}.card p{font-size:.9rem;line-height:1.65;color:var(--muted);margin:0}
+.join{border:1px solid #8f48ff55;border-radius:24px;padding:38px 22px;text-align:center;background:linear-gradient(110deg,#8c27ff17,#13bfff12);box-shadow:inset 0 0 45px #822bff0b}
+footer{padding:32px 0 38px;text-align:center;color:#8d87a7;letter-spacing:.3em;font-size:.75rem}
+@keyframes drift{to{transform:translate(18vw,12vh) scale(1.2)}}@keyframes beam{0%,100%{opacity:.2;translate:-4vw 0}50%{opacity:.8;translate:4vw 0}}@keyframes orbit{to{transform:rotate(360deg)}}
+@media(max-width:850px){nav{gap:12px}.online{display:none}.about{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.hero{min-height:520px}}
+@media(max-width:560px){header{flex-wrap:wrap;justify-content:center}nav{order:3;width:100%;justify-content:center;flex-wrap:wrap;font-size:.82rem}.brand{width:100%;text-align:center}.cards{grid-template-columns:1fr}.tagline{letter-spacing:.18em;font-size:.65rem}.hero{padding:65px 0}.intro{font-size:.98rem}.visual{min-height:230px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="scene" aria-hidden="true"><div class="gridbg"></div><div class="streak"></div><div class="streak two"></div></div>
+<header class="wrap">
+<a class="brand" href="#home">✦ K × E ✦</a>
+<nav><a href="#home">Home</a><a href="#about">Über Uns</a><a href="#features">Features</a><a href="#community">Community</a></nav>
+<span class="online">Online-Vibe</span>
+<a class="btn" href="https://discord.gg/98tKJdxnCc" target="_blank" rel="noopener noreferrer">◈ Discord beitreten ↗</a>
+</header>
+<main>
+<section class="hero wrap" id="home">
+<div class="orb" aria-hidden="true"></div>
+<div><div class="eyebrow">One community · One vision</div>
+<h1>KOLLAPZ <span style="font-size:.55em">×</span> ENZOO</h1>
+<div class="tagline">Gaming · Community · Gute Vibes</div>
+<p class="intro">Willkommen bei KOLLAPZ × ENZOO – einer Community, die mehr ist als nur ein Discord-Server. Hier findest du Leute zum Zocken, gute Gespräche und deinen Platz in unserem Vibe.</p>
+<div class="actions"><a class="btn primary" href="https://discord.gg/98tKJdxnCc" target="_blank" rel="noopener noreferrer">◈ Discord beitreten ↗</a><a class="btn" href="#about">Mehr erfahren ↓</a></div>
+</div></section>
+<section class="wrap" id="about">
+<div class="about">
+<div class="visual" aria-label="KOLLAPZ ENZOO Neon-Monogramm"><div class="monogram">K×E</div></div>
+<div class="about-copy"><div class="section-label">ÜBER UNS</div><h2>Mehr als nur ein <span class="gradient">Server.</span></h2>
+<p>KOLLAPZ × ENZOO steht für eine Community, in der Menschen zusammenkommen, neue Leute kennenlernen und gemeinsame Momente erleben. Egal, ob du am liebsten zockst, Musik hörst, mit anderen quatschst oder einfach entspannt dabei bist – hier ist Platz für deinen eigenen Vibe.</p>
+<p>Wir wollen einen Ort schaffen, an dem Respekt zählt, Gespräche entstehen und aus zufälligen Begegnungen echte Community-Momente werden. Bring gute Energie mit, sei du selbst und werde Teil von etwas, das wir gemeinsam gestalten.</p>
+<div class="values"><span>✦ Respekt</span><span>♧ Community</span><span>ϟ Gute Vibes</span><span>♡ Gemeinsam stark</span></div>
+</div></div>
+</section>
+<section class="wrap" id="features">
+<div class="section-label">WAS DICH ERWARTET</div><h2>Dein Vibe. <span class="gradient">Deine Leute.</span></h2>
+<div class="cards">
+<article class="card"><div class="icon">⌁</div><h3>Gaming & Zocken</h3><p>Finde Mitspieler, starte neue Sessions und teile deine besten Gaming-Momente.</p></article>
+<article class="card"><div class="icon">♫</div><h3>Music & Entertainment</h3><p>Teile deine Lieblingsmusik, entdecke Neues und hab Spaß mit der Community.</p></article>
+<article class="card"><div class="icon">✧</div><h3>Events & Aktionen</h3><p>Sei bei gemeinsamen Aktionen dabei und mach aus normalen Tagen besondere Momente.</p></article>
+<article class="card"><div class="icon">♧</div><h3>Aktive Community</h3><p>Lerne Leute kennen, komm ins Gespräch und bring deine eigenen Ideen mit ein.</p></article>
+</div>
+</section>
+<section class="wrap" id="community"><div class="join"><div class="section-label">WIR SEHEN UNS DRÜBEN</div><h2>Bereit, Teil davon zu werden?</h2><p class="intro">Komm vorbei, sag Hallo und werde Teil von KOLLAPZ × ENZOO.</p><div class="actions"><a class="btn primary" href="https://discord.gg/98tKJdxnCc" target="_blank" rel="noopener noreferrer">Jetzt Discord beitreten ↗</a></div></div></section>
+</main>
+<footer class="wrap">✦ KOLLAPZ × ENZOO ✦ <br><br>GEMEINSAM ERSCHAFFEN. GEMEINSAM WACHSEN.</footer>
+</body></html>
